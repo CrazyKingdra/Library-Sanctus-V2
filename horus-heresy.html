@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+        .glavni {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: justify;
+        }
+
+        .glavni h2 {
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .glavni p {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .glavni img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .glavni a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .glavni a:hover {
+            text-decoration: underline;
+        }
+        .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+footer {
+    color: #ffd700;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #ffd700;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Library Sanctus</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container-fluid ">
+                <a class="navbar-brand text-gold" href="index.html">Library Sanctus</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="horus-heresy.html">Horus Heresy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="xenos-races.html">Xenos Races</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galactic-history.html">Galactic History</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="news.html">Imperial Dispatches</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="glavni">
+            <h2>The Horus Heresy</h2>
+            <button id="toggleMode" style="position: absolute; right: 20px; top: 20px;">Toggle Light/Dark Mode</button>
+            <p>The Horus Heresy was a galaxy-shattering conflict that occurred in the early 31st Millennium. It was a civil war that tore the Imperium of Man apart and forever changed the course of human history. The roots of this catastrophic event lay in the deepest and darkest corners of human ambition, betrayal, and the corrupting influence of Chaos.</p>
+
+            <p>At the heart of the Heresy was Warmaster Horus, the favored son of the Emperor himself. Horus, seduced by the whispers of the Ruinous Powers, turned against his father and led a rebellion that saw brother fighting against brother, Space Marine Legions divided, and entire worlds plunged into the madness of war.</p>
+
+      
+      <div id="horus" class="carousel slide" >
+      
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#horus" data-bs-slide-to="0" class="active" ></button>
+          <button type="button" data-bs-target="#horus" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#horus" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/images/cavil.webp"  alt="Horus">
+          </div>
+
+          <div class="carousel-item">
+            <img src="/images/heresy.jpg" alt="Horus vs Emperor">
+          </div>
+    
+          <div class="carousel-item">
+            <img src="/images/terraa.jpg" alt="Terra fighting">
+          </div>
+        </div>
+    
+        <button class="carousel-control-prev" type="button" data-bs-target="#horus" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#horus" data-bs-slide="next">
+          <span class="carousel-control-next-icon" ></span>
+        </button> 
+      </div>
+
+      <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-transparent border-0">
+            <div class="modal-body p-0">
+              <img src="" alt="Image Preview" id="modalImage" style="transform: scale(2.5);" class="img-fluid w-100">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+            <p>The conflict spanned countless star systems, with iconic battles such as the Drop Site Massacre on Istvaan V and the Siege of Terra. Tragedy, heroism, and unimaginable horrors unfolded as Chaos forces sought to corrupt and consume the Imperium from within.</p>
+
+            <p>Ultimately, the Horus Heresy culminated in a climactic confrontation between Horus and the Emperor aboard the Vengeful Spirit, Horus' flagship. The Emperor emerged victorious but at a great cost – mortally wounded, he was interred within the Golden Throne, and the Imperium entered a new era of stagnation and darkness.</p>
+
+            <p>Here are the names of all the primarchs and their legions!</p>
+
+
+            <table id="primarchTable" class="table table-dark table-bordered">
+              <thead>
+                  <tr>
+                      <th scope="col">Primarch</th>
+                      <th scope="col">Legion</th>
+                      <th scope="col">Actions</th>
+                  </tr>
+              </thead>
+              <tbody>
+              </tbody>
+          </table>
+              
+              <p>Explore more about the individual legions, key battles, and the legacy of the Horus Heresy in the pages of the Library Sanctus.</p>
+
+            <p><a href="index.html">Back to the Library Sanctus</a></p>
+        </div>
+    </main>
+    <footer>
+        <h4>Faris Sačić</h4> 
+        <p>Foundations of Web Development</p>
+        <p>&copy; 2024 Library Sanctus</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    
+    function loadTableData() {
+  $.ajax({
+    url: '/js/primarch.json',
+    type: 'GET',
+    dataType: 'json',
+    success: function (data) {
+      const tableBody = $('#primarchTable tbody');
+      tableBody.empty();
+      data.primarchs.forEach(function (item, index) {
+        const row = `<tr data-index="${index}">
+                      <td class="primarch">${item.primarch}</td>
+                      <td class="legion">${item.legion}</td>
+                      <td>
+                        <button class="btn btn-warning btn-sm action-btn" data-action="edit">Edit</button>
+                        <button class="btn btn-danger btn-sm action-btn" data-action="delete">Delete</button>
+                      </td>
+                    </tr>`;
+        tableBody.append(row);
+      });
+    },
+    error: function (xhr, status, error) {
+      console.error("Error fetching data: " + error);
+    }
+  });
+}
+
+$(document).on('click', '.action-btn', function () {
+  const row = $(this).closest('tr');
+  const action = $(this).data('action');
+  const primarchCell = row.find('.primarch');
+  const legionCell = row.find('.legion');
+
+  if (action === 'delete') {
+    const primarch = primarchCell.text();
+    if (confirm(`Are you sure you want to delete ${primarch}?`)) {
+      row.remove();
+      alert(`${primarch} has been deleted.`);
+    }
+  } else if (action === 'edit') {
+    const currentPrimarch = primarchCell.text();
+    const currentLegion = legionCell.text();
+    const newPrimarch = prompt("Edit Primarch Name:", currentPrimarch);
+    const newLegion = prompt("Edit Legion Name:", currentLegion);
+
+    if (newPrimarch !== null && newLegion !== null) {
+      primarchCell.text(newPrimarch);
+      legionCell.text(newLegion);
+      alert(`${currentPrimarch} has been updated to ${newPrimarch}, Legion updated to ${newLegion}.`);
+    }
+  }
+});
+
+$(document).ready(function () {
+  loadTableData();
+});
+    document.addEventListener("DOMContentLoaded", function () {
+    const carouselImages = document.querySelectorAll(".carousel-item img");
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+
+    carouselImages.forEach(image => {
+      image.addEventListener("click", function () {
+        const src = this.getAttribute("src");
+        modalImage.setAttribute("src", src);
+        const modalInstance = new bootstrap.Modal(modal);
+        modalInstance.show();
+      });
+    })
+  });
+  const toggleButton = document.getElementById("toggleMode");
+
+    toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+        const isLightMode = document.body.classList.contains("light-mode");
+        localStorage.setItem("theme", isLightMode ? "light" : "dark");
+    });
+
+    window.onload = () => {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "light") {
+            document.body.classList.add("light-mode");
+        }
+    };
+</script>
+</body>
+</html>

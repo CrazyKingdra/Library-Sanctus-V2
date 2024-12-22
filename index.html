@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Library Sanctus</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container-fluid ">
+                <a class="navbar-brand text-gold" href="index.html">Library Sanctus</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="horus-heresy.html">Horus Heresy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="xenos-races.html">Xenos Races</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galactic-history.html">Galactic History</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">Imperial Dispatches</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <p>Explore the vast and grim cosmos, where humanity fights for survival against unimaginable threats. Delve into the rich lore, discover the factions, and unravel the mysteries that shape the 41st millennium. Join us on this epic journey through the Warhammer 40k universe.</p>
+        <button id="toggleMode" style="position: absolute; right: 20px; top: 20px;">Toggle Light/Dark Mode</button>
+    <table>
+ <td>
+                    <div class="info">
+                        <h2>The Horus Heresy</h2>
+                        <p>The Horus Heresy is a cataclysmic event that shook the foundations of the Imperium of Man in the 31st Millennium. It was a galaxy-spanning civil war, a tragic betrayal that pitted brother against brother, Primarch against Primarch.</p>
+                        <p>At the heart of the Heresy was the Warmaster Horus, once the favored son of the Emperor, who succumbed to the corrupting influence of Chaos. Horus rebelled against the Imperium, leading a coalition of traitorous Space Marine Legions in a campaign to overthrow the Emperor's rule.</p>
+                        <p>The conflict spanned years and countless worlds, leaving devastation in its wake. Entire Legions turned against their former allies, and the Imperium teetered on the brink of annihilation. The Heresy culminated in a climactic battle at Terra, where Horus faced the Emperor himself aboard the vengeful Warmaster's flagship, the Vengeful Spirit.</p>
+                        <a href="horus-heresy.html">Read More</a>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="info">
+                        <h2>Xenos Races</h2>
+                        <p>The Warhammer 40k universe is teeming with diverse and enigmatic Xenos races, each posing a unique threat to the Imperium. From the crafty Eldar to the brutal Orks, these alien civilizations have their own motives, cultures, and technologies that often clash with humanity's survival.</p>
+                        <p>The Eldar, ancient and sophisticated, navigate the galaxy with incredible psychic powers and advanced technology. They seek to avoid the pitfalls that led to the fall of their once-great empire.</p>
+                        <p>The Orks, on the other hand, revel in the joy of battle and conquest. Their society is built on war, and their WAAAGH! energy fuels their brutal campaigns across the stars.</p>
+                        <p>And then there are the mysterious Tau, a relatively young race with a focus on technological progress and a vision for a greater good. However, their expansion often brings them into conflict with other, less diplomatic species.</p>
+                        <a href="xenos-races.html">Explore Xenos Races</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <p align="center" style="font-size: 40px;">Prepare for a journey into a galaxy of endless war, and may the God-Emperor guide you.</p>
+<div class="tenor-gif-embed" data-postid="27420223" data-share-method="host" data-aspect-ratio="1.73913" data-width="100%"><a href="https://tenor.com/view/imperial-fist-warhammer-gif-27420223">Imperial Fist Warhammer GIF</a>from <a href="https://tenor.com/search/imperial+fist-gifs">Imperial Fist GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    </main>
+    
+    <footer>
+        <h4>Faris Sačić</h4> 
+        <p>Foundations of Web Development</p>
+        <p>&copy; 2024 Library Sanctus</p>
+    </footer>
+    <script>
+       const toggleButton = document.getElementById("toggleMode");
+
+toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+    const isLightMode = document.body.classList.contains("light-mode");
+    localStorage.setItem("theme", isLightMode ? "light" : "dark");
+});
+
+window.onload = () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+        document.body.classList.add("light-mode");
+    }
+};
+    </script>
+</body>
+</html>
