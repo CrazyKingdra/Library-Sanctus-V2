@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: justify;
+        }
+
+        .main-content h2 {
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .main-content img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .main-content a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .main-content a:hover {
+            text-decoration: underline;
+        }
+        .toggle-content {
+            display: none;
+        }
+
+        .toggle-button {
+            background-color: #3a3a3a;
+            color: #ffd700;
+            border: 2px solid #ffd700;
+            font-family: 'Impact', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        .toggle-button:hover {
+            background-color: #ffd700;
+            color: #3a3a3a;
+        }
+    </style>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Library Sanctus</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+            <div class="container-fluid ">
+                <a class="navbar-brand text-gold" href="index.html">Library Sanctus</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="horus-heresy.html">Horus Heresy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="xenos-races.html">Xenos Races</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galactic-history.html">Galactic History</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">Imperial Dispatches</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+     </header>
+    <main>
+        <button id="toggleMode" style="position: absolute; right: 20px; top: 20px;">Toggle Light/Dark Mode</button>
+        <div class="main-content">
+            <h2>Galactic History in Warhammer 40k</h2>
+            <p>The history of the Warhammer 40k universe is a tapestry of wars, betrayals, and the relentless struggle for survival. Explore the key events that have shaped the galaxy:</p>
+
+            <h3>The Great Crusade</h3>
+            <p>The Emperor of Mankind launched the Great Crusade to reunite scattered human colonies and forge a new, united Imperium. Led by the Primarchs and their Space Marine Legions, it aimed to bring order to the galaxy.</p>
+
+            <h3>The Horus Heresy</h3>
+            <p>Betrayal struck as Warmaster Horus, corrupted by Chaos, led a rebellion against the Emperor. The ensuing Horus Heresy tore the Imperium apart and left scars that endure into the grim darkness of the 41st millennium.</p>
+
+            <h3>The Age of Apostasy</h3>
+            <p>A power-hungry Ecclesiarch sparked a dark period known as the Age of Apostasy. The Imperium faced internal strife and heresy, challenging the very foundations of faith and governance.</p>
+
+            <h3>The Tyranid Invasion</h3>
+            <p>The Tyranids, a ravenous alien swarm, emerged from the void to consume entire worlds. Their arrival marked a new threat that transcended the traditional conflicts of the galaxy.</p>
+		    <div class="responsive-iframe">
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/0lhqtu1YkKA" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <button class="toggle-button" onclick="toggleVisibility('Catch')">See More</button>
+            <div id="Catch" class="toggle-content">
+                <p>Learn about the epic battles, legendary figures, and cataclysmic events that define the Warhammer 40k universe. The galaxy is a place of perpetual war, and its history is written in blood and the ashes of civilizations.</p>
+            </div>
+    </main>
+    <footer>
+        <h4>Faris Sačić</h4> 
+        <p>Foundations of Web Development</p>
+        <p>&copy; 2024 Library Sanctus</p>
+    </footer>
+
+    <script>
+        function toggleVisibility(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+        }
+        const toggleButton = document.getElementById("toggleMode");
+
+    toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+        const isLightMode = document.body.classList.contains("light-mode");
+        localStorage.setItem("theme", isLightMode ? "light" : "dark");
+    });
+
+    
+    window.onload = () => {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "light") {
+            document.body.classList.add("light-mode");
+        }
+    };
+    </script>
+</body>
+</html>
