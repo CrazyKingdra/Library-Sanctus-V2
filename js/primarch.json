@@ -1,0 +1,64 @@
+{
+  "primarchs": [
+    {
+      "primarch": "Horus Lupercal",
+      "legion": "Luna Wolves"
+    },
+    {
+      "primarch": "Mortarion",
+      "legion": "Death Guard"
+    },
+    {
+      "primarch": "Fulgrim",
+      "legion": "Emperor's Children"
+    },
+    {
+      "primarch": "Perturabo",
+      "legion": "Iron Warriors"
+    },
+    {
+      "primarch": "Angron",
+      "legion": "World Eaters"
+    },
+    {
+      "primarch": "Lorgar Aurelian",
+      "legion": "Word Bearers"
+    },
+    {
+      "primarch": "Konrad Curze",
+      "legion": "Night Lords"
+    },
+    {
+      "primarch": "Alpharius Omegon",
+      "legion": "Alpha Legion"
+    },
+    {
+      "primarch": "Magnus the Red",
+      "legion": "Thousand Sons"
+    },
+    {
+      "primarch": "Rogal Dorn",
+      "legion": "Imperial Fists"
+    },
+    {
+      "primarch": "Ferrus Manus",
+      "legion": "Iron Hands"
+    },
+    {
+      "primarch": "Roboute Guilliman",
+      "legion": "Ultramarines"
+    },
+    {
+      "primarch": "Sanguinius",
+      "legion": "Blood Angels"
+    },
+    {
+      "primarch": "Leman Russ",
+      "legion": "Space Wolves"
+    },
+    {
+      "primarch": "Corvus Corax",
+      "legion": "Raven Guard"
+    }
+  ]
+}

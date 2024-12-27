@@ -1,0 +1,228 @@
+/* Base Styles (Dark Mode) */
+body {
+    font-family: 'Frank Ruhl Libre', serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #ffd700;
+}
+
+header {
+    background-color: #000; /* Dark background for header */
+    color: #ffd700; /* Gold text */
+    text-align: center;
+    padding: 1em;
+    border-bottom: 2px solid #ffd700; /* Gold border */
+}
+
+nav {
+    background-color: #1a1a1a; /* Dark background for navigation */
+    overflow: hidden;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    display: block;
+    color: #ffd700;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #000; /* Darker background on hover */
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    nav .toggle-button {
+        display: flex;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.info {
+    padding: 20px;
+}
+
+.info h2 {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.info p {
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+.info a {
+    display: block;
+    color: #ffd700;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.info a:hover {
+    background-color: #000;
+}
+
+.nav-link {
+    color: #ffd700;
+}
+
+main {
+    padding: 20px;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    color: #ffd700;
+    margin-bottom: 8px;
+}
+
+.contact-form select,
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ffd700;
+    border-radius: 4px;
+    background-color: #1a1a1a;
+    color: #ffd700;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #ffd700;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #f9f9f9;
+    color: #1a1a1a;
+}
+
+.card {
+    background-color: #1a1a1a;
+    padding-top: 20px;
+}
+
+footer {
+    color: #ffd700;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #ffd700;
+}
+
+
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+header.light-mode {
+    background-color: #f9f9f9;
+    color: black;
+    border-bottom: 2px solid #000;
+}
+
+nav.light-mode {
+    background-color: #e0e0e0;
+}
+
+nav.light-mode a {
+    color: black;
+}
+
+.info.light-mode h2 {
+    color: black;
+}
+
+.info.light-mode p {
+    color: black;
+}
+
+.info.light-mode a {
+    color: black;
+}
+
+.contact-form.light-mode {
+    background-color: #f9f9f9;
+}
+
+.contact-form.light-mode label {
+    color: black;
+}
+
+.contact-form.light-mode select,
+.contact-form.light-mode input,
+.contact-form.light-mode textarea {
+    background-color: #fff;
+    color: black;
+    border: 1px solid #000;
+}
+
+.contact-form.light-mode button {
+    background-color: #000;
+    color: #fff;
+}
+
+.card.light-mode {
+    background-color: #f9f9f9;
+}
+
+footer.light-mode {
+    color: black;
+    border-top: 2px solid #000;
+}
+
+
+
+
